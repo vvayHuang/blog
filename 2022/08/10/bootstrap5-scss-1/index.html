@@ -21,28 +21,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"vvayhuang.github.io","root":"/blog/","images":"/blog/images","scheme":"Pisces","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/blog/js/config.js"></script>
 
-    <meta name="description" content="專案資料夾安裝 git 之後，基本設定會把 git 隱藏 如果要把它顯示有兩種方式：  在電腦設定裡面把隱藏檔案打開顯示， mac 的快速件是 shift + command + .  在 vscode 中打開設定（settings），右上角的地方點選 open setting(JSON)，在裡面輸入 files.exclude 指令，把 “**&#x2F;.git” 改為 false，即可在左方">
+    <meta name="description" content="如果要導入 bootstrap 所有元件與設定只要把路徑改成檔案的位置，例如..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;functions  &#x2F;&#x2F; Configuration@import “functions”;@import “variables”;@import “maps”;@import “mixins”;@i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="筆記一下">
-<meta property="og:url" content="https://vvayhuang.github.io/blog/2022/07/21/note/index.html">
+<meta property="og:title" content="客製化 bootstrap5 scss">
+<meta property="og:url" content="https://vvayhuang.github.io/blog/2022/08/10/bootstrap5-scss-1/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="專案資料夾安裝 git 之後，基本設定會把 git 隱藏 如果要把它顯示有兩種方式：  在電腦設定裡面把隱藏檔案打開顯示， mac 的快速件是 shift + command + .  在 vscode 中打開設定（settings），右上角的地方點選 open setting(JSON)，在裡面輸入 files.exclude 指令，把 “**&#x2F;.git” 改為 false，即可在左方">
+<meta property="og:description" content="如果要導入 bootstrap 所有元件與設定只要把路徑改成檔案的位置，例如..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;functions  &#x2F;&#x2F; Configuration@import “functions”;@import “variables”;@import “maps”;@import “mixins”;@i">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-07-21T09:22:57.000Z">
-<meta property="article:modified_time" content="2022-08-10T14:30:47.000Z">
+<meta property="article:published_time" content="2022-08-10T14:37:58.000Z">
+<meta property="article:modified_time" content="2022-08-10T15:06:12.000Z">
 <meta property="article:author" content="wayHuang">
-<meta property="article:tag" content="note">
+<meta property="article:tag" content="bootstrap5">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="scss">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://vvayhuang.github.io/blog/2022/07/21/note/">
+<link rel="canonical" href="https://vvayhuang.github.io/blog/2022/08/10/bootstrap5-scss-1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://vvayhuang.github.io/blog/2022/07/21/note/","path":"2022/07/21/note/","title":"筆記一下"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://vvayhuang.github.io/blog/2022/08/10/bootstrap5-scss-1/","path":"2022/08/10/bootstrap5-scss-1/","title":"客製化 bootstrap5 scss"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>筆記一下 | blog</title>
+<title>客製化 bootstrap5 scss | blog</title>
   
 
 
@@ -189,7 +191,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://vvayhuang.github.io/blog/2022/07/21/note/">
+    <link itemprop="mainEntityOfPage" href="https://vvayhuang.github.io/blog/2022/08/10/bootstrap5-scss-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -202,12 +204,12 @@
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="筆記一下 | blog">
+      <meta itemprop="name" content="客製化 bootstrap5 scss | blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          筆記一下
+          客製化 bootstrap5 scss
         </h1>
 
         <div class="post-meta-container">
@@ -217,15 +219,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2022-07-21 17:22:57" itemprop="dateCreated datePublished" datetime="2022-07-21T17:22:57+08:00">2022-07-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-08-10 22:30:47" itemprop="dateModified" datetime="2022-08-10T22:30:47+08:00">2022-08-10</time>
+      <time title="創建時間：2022-08-10 22:37:58 / 修改時間：23:06:12" itemprop="dateCreated datePublished" datetime="2022-08-10T22:37:58+08:00">2022-08-10</time>
     </span>
 
   
@@ -238,16 +234,34 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>專案資料夾安裝 git 之後，基本設定會把 git 隱藏</p>
-<p>如果要把它顯示有兩種方式：</p>
-<ul>
-<li><p>在電腦設定裡面把隱藏檔案打開顯示， mac 的快速件是 shift + command + .</p>
-</li>
-<li><p>在 vscode 中打開設定（settings），右上角的地方點選 open setting(JSON)，在裡面輸入 files.exclude 指令，把 “**&#x2F;.git” 改為 false，即可在左方列表看到 git 資料夾。</p>
-</li>
-<li><p>電腦預設會把 git 資料夾隱藏，所以只要把隱藏打開就可以看到資料夾。macOS 打開隱藏檔的快速鍵是 shift + command + .</p>
-</li>
-</ul>
+        <p>如果要導入 bootstrap 所有元件與設定<br>只要把路徑改成檔案的位置，例如..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;functions</p>
+<hr>
+<p>&#x2F;&#x2F; Configuration<br>@import “functions”;<br>@import “variables”;<br>@import “maps”;<br>@import “mixins”;<br>@import “utilities”;</p>
+<p>&#x2F;&#x2F; Layout &amp; components<br>@import “root”;<br>@import “reboot”;<br>@import “type”;<br>@import “images”;<br>@import “containers”;<br>@import “grid”;<br>@import “tables”;<br>@import “forms”;<br>@import “buttons”;<br>@import “transitions”;<br>@import “dropdown”;<br>@import “button-group”;<br>@import “nav”;<br>@import “navbar”;<br>@import “card”;<br>@import “accordion”;<br>@import “breadcrumb”;<br>@import “pagination”;<br>@import “badge”;<br>@import “alert”;<br>@import “progress”;<br>@import “list-group”;<br>@import “close”;<br>@import “toasts”;<br>@import “modal”;<br>@import “tooltip”;<br>@import “popover”;<br>@import “carousel”;<br>@import “spinners”;<br>@import “offcanvas”;<br>@import “placeholders”;</p>
+<p>&#x2F;&#x2F; Helpers<br>@import “helpers”;</p>
+<p>&#x2F;&#x2F; Utilities<br>@import “utilities&#x2F;api”;</p>
+<hr>
+<p>但是因為不一定會用到所有的元件，可以把不需要的元件刪除</p>
+<p>根據官方文件，可以這樣做<br>&#x2F;&#x2F; Custom.scss<br>&#x2F;&#x2F; Option B: Include parts of Bootstrap</p>
+<p>&#x2F;&#x2F; 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;functions”;</p>
+<p>&#x2F;&#x2F; 2. Include any default variable overrides here</p>
+<p>&#x2F;&#x2F; 3. Include remainder of required Bootstrap stylesheets<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;variables”;</p>
+<p>&#x2F;&#x2F; 4. Include any default map overrides here</p>
+<p>&#x2F;&#x2F; 5. Include remainder of required parts<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;maps”;<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;mixins”;<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;root”;</p>
+<p>&#x2F;&#x2F; 6. Optionally include any other parts as needed<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;utilities”;<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;reboot”;<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;type”;<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;images”;<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;containers”;<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;grid”;<br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;helpers”;</p>
+<p>&#x2F;&#x2F; 7. Optionally include utilities API last to generate classes based on the Sass map in <code>_utilities.scss</code><br>@import “..&#x2F;node_modules&#x2F;bootstrap&#x2F;scss&#x2F;utilities&#x2F;api”;</p>
+<p>&#x2F;&#x2F; 8. Add additional custom code here</p>
+<p>一到七點基本上都是需要的，而且必須注意順序，如果不對編譯就會出現錯誤</p>
+<p>客製化的部分就可以加在最後的地方</p>
+<p>客製化元件在 scss 編寫的時候，要寫 before , after 這樣寫</p>
+<p>&amp;::before</p>
+<p>要寫 hover, focus, active 這樣寫</p>
+<p>&amp;:hover</p>
+<p>要寫在一起的話這樣寫</p>
+<p>&amp;:hover, &amp;:focus</p>
+<p>也可以操作狀態</p>
+<p>例如 collapse 的屬性 [aria-expanded&#x3D;”true”] 可以這樣寫</p>
+<p>&amp;[aria-expanded&#x3D;”true”]</p>
 
     </div>
 
@@ -257,20 +271,22 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/note/" rel="tag"># note</a>
+              <a href="/blog/tags/bootstrap5/" rel="tag"># bootstrap5</a>
+              <a href="/blog/tags/css/" rel="tag"># css</a>
+              <a href="/blog/tags/scss/" rel="tag"># scss</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/blog/2022/06/29/long-time-no-see/" rel="prev" title="啊～又過了好久">
-                  <i class="fa fa-chevron-left"></i> 啊～又過了好久
+                <a href="/blog/2022/07/21/note/" rel="prev" title="筆記一下">
+                  <i class="fa fa-chevron-left"></i> 筆記一下
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/blog/2022/08/10/bootstrap5-scss-1/" rel="next" title="客製化 bootstrap5 scss">
-                  客製化 bootstrap5 scss <i class="fa fa-chevron-right"></i>
+                <a href="/blog/2023/09/10/hexobootcamp-2023-experience/" rel="next" title="2023六角學院網頁切版直播班心得">
+                  2023六角學院網頁切版直播班心得 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
